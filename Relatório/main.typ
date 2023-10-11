@@ -65,6 +65,12 @@
 
 = Modelo de Domínio
 
+#figure(
+  caption: "Modelo de domínio",
+  kind: image,
+  image("images/modelo_de_dominio_v3.png", width: 100%)
+)
+
 = Modelo de Use Cases
 
 = Conclusões
