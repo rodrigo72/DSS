@@ -14,11 +14,11 @@
   {
     set page(paper: "a4", margin: (x: 0cm,y: 0cm))
     
-    rect(fill: rgb("#fa8240") ,height: 100%, width:23.3%)
+    rect(fill: rgb("#7d3a40") ,height: 100%, width:23.3%)
     
-    place(bottom + left,dx: 200pt,dy:-40pt, {
-      text(weight:"bold", size: 120pt, fill: rgb("#fa8240"), [DSS])
-    })
+    // place(bottom + left,dx: 14pt,dy:-25pt, {
+    //   text(weight:"bold", size: 70pt, fill: white, [DSS])
+    // })
   
     {
       set place(top+left, dx: 200pt)
