@@ -71,16 +71,34 @@
   image("images/modelo_de_dominio_v3.png", width: 100%)
 )
 
+
 = Modelo de Use Cases
 
-== Another one
 
-*Use case*: 
+== Login
+
+*Use case*: Login
 - *Descrição*:
 - *Cenários*: 
 - *Pré-condição*:
 - *Pós-condição*:
 - *Fluxo normal*:
+
+
+== Instalação do sistema
+
+*Use case*: Instalação do sistema
+- *Descrição*: Um funcionário da empresa instala o sistema numa oficina
+- *Cenários*: (1) Configuração do sistema
+- *Pré-condição*: True (por enquanto) //FIXME rever
+- *Pós-condição*: O sistema está funcional (por enquanto) //FIXME rever  
+- *Fluxo normal*:
+  1. Um funcionário faz o login com credenciais de administrador (Use case login)
+  2. São registados todos os postos de trabalho existentes 
+  3. É definido o tipo de serviço que cada posto pode realizar
+  4. São registados os mecânicos
+  5. É registado o horário de funcionamento da oficina
+
 
 == Registo de um cliente
 
@@ -90,6 +108,7 @@
 - *Pré-condição*:
 - *Pós-condição*:
 - *Fluxo normal*:
+
 
 == Check-Up
 
@@ -111,6 +130,17 @@
   3.2.2 Quandos os serviços terminam, o cliente é notificado. \
 - *Fluxo alternativo 3:* [Cliente não concorda que os serviços sejam efetuados] (Passo 3.2)\
   3.2.1  Os serviços não são efetuados.
+
+
+== Another one
+
+*Use case*: 
+- *Descrição*:
+- *Cenários*: 
+- *Pré-condição*:
+- *Pós-condição*:
+- *Fluxo normal*:
+
 
 = Conclusões
 
