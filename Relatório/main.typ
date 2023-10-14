@@ -132,14 +132,20 @@
   3.2.1  Os serviços não são efetuados.
 
 
-== Another one
+== Comunicação com os clientes
 
-*Use case*: 
-- *Descrição*:
+*Use case*: Comunicação com os clientes
+- *Descrição*: O sistema pode enviar atualizações automáticas por SMS ou e-mail para informar os clientes sobre o progresso do serviço e quando o veículo estiver pronto para ser retirado.
 - *Cenários*: 
-- *Pré-condição*:
-- *Pós-condição*:
+- *Pré-condição*: O cliente deve ter pelo menos um veículo em manutenção numa oficina da estação de serviço.
+- *Pós-condição*: 
 - *Fluxo normal*:
+  1. O cliente deixa o automóvel numa oficina e informa se pretende ser informado da progressão dos serviços ou se apenas deseja ser notificado no final da conclusão dos mesmos.
+  2. A oficina realiza os serviços requisitados ou necessários ao veículo.
+  3. Após a conclusão dos serviços, é enviada uma mensagem via SMS ou e-mail para o contacto registaod na ficha do cliente.
+- *Fluxo alternativo 1:* [O cliente quer ser notificado da progressão do serviço] (Passo 2) \ 
+  2.1 A oficina vai atualizando a ficha de serviços realizados no automóvel e notificando o cliente da progressão dos mesmos.
+  2.2 Aquando da conclusão de todos os serviços, o cliente é notificado de que o automóvel está pronto para recolha.
 
 
 = Conclusões
