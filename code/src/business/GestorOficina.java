@@ -32,9 +32,19 @@ public class GestorOficina implements IGestorOficina {
     }
 
     public void addPedido(String matricula, List<Servico> servicos, boolean notificar, int parentID) throws IllegalArgumentException, IllegalStateException, NoSuchElementException {
-        Pedido p = this.gestorPedidos.addPedido(matricula, servicos, EstadoPedido.EM_EXECUCAO, notificar, parentID);
+
         FichaVeiculo f = this.gestorPedidos.getFichaVeiculo(matricula);
+
+        TipoMotor tipoMotor = f.getTipoMotor();
+        for (Servico servico : servicos) {
+            if (!TipoMotor.compativel(servico.getTipoServico(), tipoMotor)) {
+                throw new IllegalArgumentException("Tipo de motor incompativel");
+            }
+        }
+
+        Pedido p = this.gestorPedidos.addPedido(matricula, servicos, EstadoPedido.EM_EXECUCAO, notificar, parentID);
         List<Integer> pedidos = new ArrayList<>(f.getPedidosIds());
+        pedidos.add(p.getId());
         for (Servico servico : p.getServicos()) {
             this.gestorPostosTrabalho.addServico(servico, pedidos);
             this.updateServico(servico);
